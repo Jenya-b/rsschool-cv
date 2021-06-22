@@ -10,3 +10,16 @@ evgenyborisevich@inbox.ru<br><br>
 My goal is to gain knowledge and practical skills that will help me realize my dream of becoming a developer. Since I am a beginner web developer, I have no work experience. But I firmly believe that my desire to win and my ability to grasp everything on the fly will bring me success.<br>
 ## SKILS
 I have basic knowledge of HTML / СSS, JS. Familiarized with SCSS preprocessors.<br>
+## CODE EXAMPLES
+```javascript
+function largestPairSum(numbers) {
+  return numbers.sort((a, b) => b - a)
+    .splice(0, 2)
+    .reduce((sum, current) => sum + current, 0);
+}
+```
+## EDUCATION
+1. Military Academy of the Republic of Belarus (2013) with a degree in Operation of Automated Information Support Systems.
+2. Academy of Management under the President of the Republic of Belarus (2021) with a degree in Public Administration and Economics.<br>
+## ENGLISH LEVEL
+At the moment my level is basic, but I am gradually increasing it.
