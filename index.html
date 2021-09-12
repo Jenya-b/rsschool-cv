@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
 	<title>CV</title>
 </head>
 
@@ -51,8 +52,150 @@
 			</nav>
 		</header>
 		<main class="main">
-			<aside class="sidebar content"></aside>
-			<section class="basic-info content"></section>
+			<aside class="sidebar content">
+				<div class="content__item">
+					<div class="content__title content__title-sidebar">
+						<h2 class="content__text">Contacts</h2>
+						<img src="img/icon-content/contacts.svg" alt="contacts">
+					</div>
+					<ul class="content__desc content__desc-sidebar">
+						<li>Minsk, Belarus</li>
+						<li>evgenyborisevich@inbox.ru</li>
+						<li>+375 (33) 642-22-45</li>
+					</ul>
+				</div>
+				<div class="content__item skils">
+					<div class="content__title content__title-sidebar">
+						<h2 class="content__text">Skils</h2>
+						<img src="img/icon-content/pen.svg" alt="contacts">
+					</div>
+					<div class="content__desc content__desc-sidebar skils__items">
+						<div class="skils__item">
+							<div class="skils__text">HTML / CSS</div>
+							<div class="skils__progress skils__progress-html"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Flexbox, Grid</div>
+							<div class="skils__progress skils__progress-flex"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Methodology BEM</div>
+							<div class="skils__progress skils__progress-bem"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">JavaScript</div>
+							<div class="skils__progress skils__progress-js"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Figma, Photoshop</div>
+							<div class="skils__progress skils__progress-figma"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content__item skils">
+					<div class="content__title content__title-sidebar">
+						<h2 class="content__text">Language</h2>
+						<img src="img/icon-content/language.svg" alt="contacts">
+					</div>
+					<div class="content__desc content__desc-sidebar skils__items">
+						<div class="skils__item">
+							<div class="skils__text">English</div>
+							<div class="skils__progress skils__progress-en"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Russian</div>
+							<div class="skils__progress skils__progress-ru"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content__item skils">
+					<div class="content__title content__title-sidebar">
+						<h2 class="content__text">Interests</h2>
+						<img src="img/icon-content/music.svg" alt="interests">
+					</div>
+					<div class="content__desc content__desc-sidebar skils__items">
+						<div class="skils__item">
+							<div class="skils__text">Travel</div>
+							<div class="skils__progress skils__progress-travel"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Photograph</div>
+							<div class="skils__progress skils__progress-photo"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Sport</div>
+							<div class="skils__progress skils__progress-sport"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Reading</div>
+							<div class="skils__progress skils__progress-read"></div>
+						</div>
+						<div class="skils__item">
+							<div class="skils__text">Cooking on fire</div>
+							<div class="skils__progress skils__progress-cook"></div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<section class="basic-info content">
+				<div class="content__item">
+					<div class="content__title content__title-basic">
+						<h2 class="content__text">About myself</h2>
+						<img src="img/icon-content/myself.svg" alt="myself">
+					</div>
+					<div class="content__desc content__desc-basic">
+						My goal is to gain knowledge and practical skills that will help me realize my dream of becoming a
+						developer. Since I am a beginner web developer, I have no work experience. But I firmly believe that
+						my desire to win and my ability to grasp everything on the fly will bring me success.
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="content__title content__title-basic">
+						<h2 class="content__text">Education</h2>
+						<img src="img/icon-content/education.svg" alt="education">
+					</div>
+					<ul class="content__desc content__desc-basic">
+						<li>Military Academy of the Republic of Belarus (2013) with a degree in Operation of Automated
+							Information Support Systems.</li>
+						<li>Academy of Management under the President of the Republic of Belarus (2021) with a degree in
+							Public Administration and Economics.</li>
+					</ul>
+				</div>
+				<div class="content__item">
+					<div class="content__title content__title-basic">
+						<h2 class="content__text">Code examples</h2>
+						<img src="img/icon-content/code.svg" alt="code">
+					</div>
+					<pre><code style="background: #d2cccc; font-size: 16px;" class="javascript">
+function сounter() {
+ let count = 0;
+ 
+ return function() {
+  return count++;
+ };
+}</code></pre>
+				</div>
+				<div class="content__item project">
+					<div class="content__title content__title-basic">
+						<h2 class="content__text">Projects</h2>
+						<img src="img/icon-content/project.svg" alt="project">
+					</div>
+					<div class="project__items">
+						<div class="project__item">
+							<a href="https://rolling-scopes-school.github.io/jenya-b-JSFEPRESCHOOL/js-clock/"
+								class="project__link">
+								<img src="img/project/js-clock.jpg" alt="js-clock">
+							</a>
+						</div>
+						<div class="project__item">
+							<a href="https://rolling-scopes-school.github.io/jenya-b-JSFEPRESCHOOL/custom-video-player/"
+								class="project__link">
+								<img src="img/project/videoplayer.jpg" alt="videoplayer">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="logo-course">
@@ -65,6 +208,9 @@
 			</div>
 		</footer>
 	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </body>
 
 </html>
