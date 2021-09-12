@@ -8,12 +8,19 @@ body {
 	background: rgb(219, 221, 210);
 }
 .wrapper {
+	min-height: 100vh;
+	background: #d2cccc;
 	max-width: 1200px;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template: minmax(300px, auto) 1fr minmax(150px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
 }
 .header {
+	grid-area: header;
 	color: #d2cccc;
 	background: rgb(44, 40, 40);
 	padding: 40px 0 60px 0;
@@ -105,8 +112,33 @@ body {
 }
 
 .main {
+	grid-area: main;
 }
+.sidebar {
+}
+.content {
+}
+.basic-info {
+}
+
 .footer {
+	grid-area: footer;
+	padding: 0 50px;
+	background: rgb(44, 40, 40);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo-course {
+	width: 200px;
+	&__link {
+	}
+}
+.my-github {
+	&__link {
+		color: #d2cccc;
+		font-size: 20px;
+	}
 }
 
 @media (min-width: 992px) {

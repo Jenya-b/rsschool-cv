@@ -96,18 +96,22 @@ body {
 }
 
 .wrapper {
+  min-height: 100vh;
+  background: #d2cccc;
   max-width: 1200px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(300px, auto) 1fr minmax(150px, auto);
+  -ms-grid-columns: 1fr;
+      grid-template: minmax(300px, auto) 1fr minmax(150px, auto)/1fr;
+      grid-template-areas: "header" "main" "footer";
 }
 
 .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
   color: #d2cccc;
   background: #2c2828;
   padding: 40px 0 60px 0;
@@ -192,6 +196,38 @@ body {
   padding: 6px;
   width: 100%;
   height: 100%;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  padding: 0 50px;
+  background: #2c2828;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-course {
+  width: 200px;
+}
+
+.my-github__link {
+  color: #d2cccc;
+  font-size: 20px;
 }
 
 @media (min-width: 992px) {
