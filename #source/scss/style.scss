@@ -1,0 +1,170 @@
+@import "_nullstyle";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+body {
+	font-family: "Open Sans", sans-serif;
+	width: 100%;
+	height: 100%;
+	background: rgb(219, 221, 210);
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	color: #d2cccc;
+	background: rgb(44, 40, 40);
+	padding: 40px 0 60px 0;
+	&__logo {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 12px;
+		border: 8px solid #d2cccc;
+	}
+	&__logo img {
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+	}
+
+	&__menu {
+	}
+
+	&__info {
+	}
+
+	&__social-menu {
+	}
+}
+
+.info {
+	text-transform: uppercase;
+	&__title {
+		font-size: 20px;
+		font-weight: 100;
+		margin-bottom: 15px;
+	}
+
+	&__employee-name {
+		font-size: 42px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+
+	&__profession {
+		font-size: 24px;
+		font-weight: 100;
+		// font-style: italic;
+	}
+}
+
+.menu {
+	&__items {
+		display: flex;
+		justify-content: flex-end;
+		font-size: 14px;
+		margin-right: 50px;
+		text-transform: uppercase;
+	}
+
+	&__item {
+		margin-left: 30px;
+	}
+
+	&__link {
+		color: #d2cccc;
+	}
+
+	&__burger {
+	}
+}
+.social-menu {
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&__item {
+	}
+	&__link {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border: 2px solid #d2cccc;
+		border-radius: 50%;
+	}
+	&__link img {
+		padding: 6px;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.main {
+}
+.footer {
+}
+
+@media (min-width: 992px) {
+	.header {
+		display: grid;
+		grid-template: repeat(2, auto) / minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 80px);
+		grid-template-areas:
+			"menu menu menu"
+			"logo info social-menu";
+		column-gap: 40px;
+		align-items: center;
+		&__logo {
+			grid-area: logo;
+			justify-self: center;
+			align-self: center;
+		}
+		&__logo img {
+		}
+
+		&__menu {
+			grid-area: menu;
+		}
+
+		&__info {
+			grid-area: info;
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+		&__social-menu {
+			grid-area: social-menu;
+		}
+	}
+
+	.menu {
+		&__items {
+		}
+
+		&__item {
+		}
+
+		&__link {
+		}
+
+		&__burger {
+		}
+	}
+	.social-menu {
+		&__items {
+		}
+		&__item {
+		}
+
+		&__link {
+		}
+	}
+}
