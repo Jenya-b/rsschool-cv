@@ -21,10 +21,21 @@ body {
 }
 .header {
 	grid-area: header;
+	display: grid;
+	grid-template: repeat(2, auto) / minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 80px);
+	grid-template-areas:
+		"menu menu menu"
+		"logo info social-menu";
+	column-gap: 40px;
+	align-items: center;
 	color: #d2cccc;
 	background: rgb(44, 40, 40);
 	padding: 40px 0 60px 0;
+
 	&__logo {
+		grid-area: logo;
+		justify-self: center;
+		align-self: center;
 		width: 250px;
 		height: 250px;
 		border-radius: 50%;
@@ -39,12 +50,15 @@ body {
 	}
 
 	&__menu {
+		grid-area: menu;
 	}
 
 	&__info {
+		grid-area: info;
 	}
 
 	&__social-menu {
+		grid-area: social-menu;
 	}
 }
 
@@ -86,6 +100,39 @@ body {
 	}
 
 	&__burger {
+		display: none;
+		position: absolute;
+		width: 30px;
+		height: 20px;
+		right: 30px;
+		top: 30px;
+	}
+	&__burger span {
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #d2cccc;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__burger::before {
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: #d2cccc;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__burger::after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: #d2cccc;
+		position: absolute;
+		left: 0;
+		bottom: 0;
 	}
 }
 .social-menu {
@@ -107,6 +154,71 @@ body {
 		padding: 6px;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+@media (max-width: 992px) {
+	.header {
+		display: grid;
+		grid-template: repeat(3, auto) / 1fr;
+		grid-template-areas:
+			"logo"
+			"info"
+			"social-menu";
+		align-items: center;
+		justify-items: center;
+		gap: 0;
+		padding: 60px 0 50px 0;
+
+		&__logo {
+		}
+		&__logo img {
+		}
+
+		&__menu {
+		}
+
+		&__info {
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		&__social-menu {
+			margin-top: 40px;
+		}
+	}
+
+	.menu {
+		&__items {
+			display: none;
+		}
+
+		&__item {
+		}
+
+		&__link {
+		}
+
+		&__burger {
+			display: block;
+		}
+		&__burger span {
+		}
+		&__burger::before {
+		}
+		&__burger::after {
+		}
+	}
+	.social-menu {
+		&__items {
+			flex-direction: row;
+		}
+		&__item {
+		}
+		&__link {
+		}
+		&__link img {
+		}
 	}
 }
 
@@ -260,6 +372,32 @@ body {
 	}
 }
 
+@media (max-width: 992px) {
+	.main {
+		padding: 50px 0;
+	}
+	.content {
+		&__title-sidebar {
+			padding: 0 25px 0 30px;
+		}
+		&__title-basic {
+			padding: 0 30px 0 25px;
+		}
+
+		&__desc-sidebar {
+			padding: 0 40px 0 30px;
+		}
+		&__desc-basic {
+			padding: 0 40px 0 10px;
+		}
+	}
+	.project {
+		&__items {
+			padding: 0 40px 0 10px;
+		}
+	}
+}
+
 .footer {
 	grid-area: footer;
 	padding: 0 50px;
@@ -277,65 +415,5 @@ body {
 	&__link {
 		color: #d2cccc;
 		font-size: 20px;
-	}
-}
-
-@media (min-width: 992px) {
-	.header {
-		display: grid;
-		grid-template: repeat(2, auto) / minmax(auto, 400px) minmax(auto, 720px) minmax(auto, 80px);
-		grid-template-areas:
-			"menu menu menu"
-			"logo info social-menu";
-		column-gap: 40px;
-		align-items: center;
-		&__logo {
-			grid-area: logo;
-			justify-self: center;
-			align-self: center;
-		}
-		&__logo img {
-		}
-
-		&__menu {
-			grid-area: menu;
-		}
-
-		&__info {
-			grid-area: info;
-		}
-
-		&__title {
-		}
-
-		&__subtitle {
-		}
-
-		&__social-menu {
-			grid-area: social-menu;
-		}
-	}
-
-	.menu {
-		&__items {
-		}
-
-		&__item {
-		}
-
-		&__link {
-		}
-
-		&__burger {
-		}
-	}
-	.social-menu {
-		&__items {
-		}
-		&__item {
-		}
-
-		&__link {
-		}
 	}
 }
