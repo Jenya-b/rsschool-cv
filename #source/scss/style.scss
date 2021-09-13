@@ -168,15 +168,7 @@ body {
 		align-items: center;
 		justify-items: center;
 		gap: 0;
-		padding: 60px 0 50px 0;
-
-		&__logo {
-		}
-		&__logo img {
-		}
-
-		&__menu {
-		}
+		padding: 80px 0 70px 0;
 
 		&__info {
 			margin-top: 50px;
@@ -193,31 +185,55 @@ body {
 			display: none;
 		}
 
-		&__item {
-		}
-
-		&__link {
-		}
-
 		&__burger {
 			display: block;
-		}
-		&__burger span {
-		}
-		&__burger::before {
-		}
-		&__burger::after {
 		}
 	}
 	.social-menu {
 		&__items {
 			flex-direction: row;
 		}
+	}
+}
+
+@media (max-width: 767px) {
+	.wrapper {
+		grid-template: minmax(300px, auto) 1fr minmax(120px, auto) / 1fr;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+	}
+	.header {
+		color: rgb(44, 40, 40);
+		background: #d2cccc;
+
+		&__logo {
+			padding: 0;
+			border: 12px solid rgb(44, 40, 40);
+		}
+	}
+	.menu {
+		&__burger span {
+			background-color: rgb(44, 40, 40);
+		}
+		&__burger::after {
+			background-color: rgb(44, 40, 40);
+		}
+		&__burger::before {
+			background-color: rgb(44, 40, 40);
+		}
+	}
+	.social-menu {
+		&__items {
+		}
 		&__item {
 		}
 		&__link {
+			border: 2px solid rgb(44, 40, 40);
 		}
 		&__link img {
+			filter: invert(96%) sepia(6%) saturate(134%) hue-rotate(314deg) brightness(82%) contrast(101%);
 		}
 	}
 }
@@ -398,6 +414,52 @@ body {
 	}
 }
 
+@media (max-width: 767px) {
+	.main {
+		grid-template: repeat(2, auto) / 1fr;
+		column-gap: 40px;
+		padding: 0;
+	}
+	.content {
+		row-gap: 30px;
+		&__title {
+			background-color: rgb(44, 40, 40);
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__title img {
+			display: none;
+		}
+		&__desc {
+			padding: 0 20px;
+		}
+	}
+	.skils {
+		&__item {
+			justify-content: left;
+		}
+		&__text {
+			flex: 0 0 50%;
+		}
+		&__progress {
+			flex: 0 1 50%;
+			// width: 200px;
+		}
+	}
+	.basic-info {
+		margin-top: 30px;
+		padding-bottom: 30px;
+	}
+	.project {
+		&__items {
+			padding: 0 20px 0 20px;
+		}
+	}
+}
+
 .footer {
 	grid-area: footer;
 	padding: 0 50px;
@@ -415,5 +477,11 @@ body {
 	&__link {
 		color: #d2cccc;
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer {
+		padding: 0 20px;
 	}
 }
