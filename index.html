@@ -17,15 +17,16 @@
 			<div class="header__logo">
 				<img src="img/logo.jpg" alt="log">
 			</div>
+			<div class="header__burger">
+				<span></span>
+			</div>
 			<nav class="header__menu menu">
 				<ul class="menu__items">
-					<li class="menu__item"><a href="#" class="menu__link">About my self</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Skils</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Education</a></li>
+					<li class="menu__item"><a href="#myself" class="menu__link" onclick="clickLink()">About myself</a></li>
+					<li class="menu__item"><a href="#education" class="menu__link" onclick="clickLink()">Education</a></li>
+					<li class="menu__item"><a href="#code" class="menu__link" onclick="clickLink()">Code examples</a></li>
+					<li class="menu__item"><a href="#project" class="menu__link" onclick="clickLink()">Projects</a></li>
 				</ul>
-				<div class="menu__burger">
-					<span></span>
-				</div>
 			</nav>
 			<div class="header__info info">
 				<h1 class="info__title">curiculum vitae</h1>
@@ -136,7 +137,7 @@
 				</div>
 			</aside>
 			<section class="basic-info content">
-				<div class="content__item">
+				<div class="content__item" id="myself">
 					<div class="content__title content__title-basic">
 						<h2 class="content__text">About myself</h2>
 						<img src="img/icon-content/myself.svg" alt="myself">
@@ -147,7 +148,7 @@
 						my desire to win and my ability to grasp everything on the fly will bring me success.
 					</div>
 				</div>
-				<div class="content__item">
+				<div class="content__item" id="education">
 					<div class="content__title content__title-basic">
 						<h2 class="content__text">Education</h2>
 						<img src="img/icon-content/education.svg" alt="education">
@@ -159,7 +160,7 @@
 							Public Administration and Economics.</li>
 					</ul>
 				</div>
-				<div class="content__item">
+				<div class="content__item" id="code">
 					<div class="content__title content__title-basic">
 						<h2 class="content__text">Code examples</h2>
 						<img src="img/icon-content/code.svg" alt="code">
@@ -181,7 +182,7 @@ function squaresNeeded(grains) {
  }
 }</code></pre>
 				</div>
-				<div class="content__item project">
+				<div class="content__item project" id="project">
 					<div class="content__title content__title-basic">
 						<h2 class="content__text">Projects</h2>
 						<img src="img/icon-content/project.svg" alt="project">
@@ -217,6 +218,7 @@ function squaresNeeded(grains) {
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

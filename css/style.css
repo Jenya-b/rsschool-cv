@@ -88,6 +88,10 @@ h6 {
 }
 
 /* --------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   width: 100%;
@@ -170,6 +174,52 @@ body {
   grid-area: social-menu;
 }
 
+.header__burger {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  right: 30px;
+  top: 30px;
+}
+
+.header__burger span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #d2cccc;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #d2cccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #d2cccc;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .info {
   text-transform: uppercase;
 }
@@ -211,46 +261,6 @@ body {
   color: #d2cccc;
 }
 
-.menu__burger {
-  display: none;
-  position: absolute;
-  width: 30px;
-  height: 20px;
-  right: 30px;
-  top: 30px;
-}
-
-.menu__burger span {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #d2cccc;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.menu__burger::before {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #d2cccc;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.menu__burger::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #d2cccc;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
 .social-menu__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,6 +287,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header {
     display: -ms-grid;
     display: grid;
@@ -298,11 +311,61 @@ body {
   .header__social-menu {
     margin-top: 40px;
   }
-  .menu__items {
-    display: none;
-  }
-  .menu__burger {
+  .header__burger {
     display: block;
+    z-index: 3;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: #2c2828;
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+    background-color: #2c2828;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+    background-color: #2c2828;
+  }
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #d2cccc;
+    z-index: 2;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .menu.active {
+    top: 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .menu__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 80px 0 0 0;
+  }
+  .menu__item {
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .menu__link {
+    color: #2c2828;
+    font-size: 25px;
   }
   .social-menu__items {
     -webkit-box-orient: horizontal;
@@ -327,14 +390,29 @@ body {
     padding: 0;
     border: 12px solid #2c2828;
   }
-  .menu__burger span {
+  .header__burger span {
     background-color: #2c2828;
   }
-  .menu__burger::after {
+  .header__burger::after {
     background-color: #2c2828;
   }
-  .menu__burger::before {
+  .header__burger::before {
     background-color: #2c2828;
+  }
+  .header__burger.active span {
+    background-color: #d2cccc;
+  }
+  .header__burger.active::before {
+    background-color: #d2cccc;
+  }
+  .header__burger.active::after {
+    background-color: #d2cccc;
+  }
+  .menu {
+    background-color: #2c2828;
+  }
+  .menu__link {
+    color: #d2cccc;
   }
   .social-menu__link {
     border: 2px solid #2c2828;
