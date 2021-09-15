@@ -171,8 +171,8 @@ function squaresNeeded(grains) {
  
  let count = 1;
  
- for (let i = 1; i <= 64; i++) {
-  if (count < grains) {
+ for (let i = 1; i &lt;= 64; i++) {
+  if (count &lt; grains) {
     count *= 2;
   } else if (count == grains) {
     return i
